@@ -1,0 +1,158 @@
+.background{
+     height: 250px;
+    background-image: url(budget2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.style{
+    margin: 0px;
+    padding: 0px;
+}
+.budget {
+    position: absolute;
+    width: 350px;
+    top: 10%;
+    left: 40%;
+    color:yellow;
+}
+.heading{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.balance{
+     font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+.settings::after{
+      content: "";
+    display: table;
+    clear: both;
+}
+.income{
+    padding: 12px;
+    text-transform: uppercase;
+     margin-bottom: 10px;
+    background-color: rgb(40,185,181);
+}
+.innertext{
+    float: left;
+    font-size: 13px;
+    color: black;
+    margin-top: 2px;
+}
+.value{
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    
+   
+    color:black;
+    
+}
+.percentage{
+    float: left;
+    width: 34px;
+    font-size: 11px;
+    padding: 3px 0;
+    margin-left: 10px;
+    color: black;
+}
+
+.expense{
+    padding: 12px;
+    text-transform: uppercase;
+    
+    background-color: rgb(255,80,73);
+}
+
+.add {
+    padding: 14px;
+    border-bottom: 1px solid rgb(231,231,231);
+    background-color: rgb(247,247,247);
+    height: 65px;
+}
+
+/*.add__container {
+    margin: 0 auto;
+   
+}*/
+
+.options {
+/*    width: 55px;*/
+    border: 1px solid rgb(231,231,231);
+    height: 44px;
+    font-size: 18px;
+    color: inherit;
+    background-color: white;
+    margin-right: 10px;
+    font-weight: bold;
+/*    transition: border 0.3s;*/
+}
+
+.description
+{
+    border: 1px solid #e7e7e7;
+    background-color: white;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+    
+}
+
+
+
+.btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: forestgreen;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: px;
+    line-height: 0.7;
+}
+
+
+
+
+.options:focus,
+.description:focus,
+ {
+    outline: none;
+    border: 1px solid rgb(40,185,181);
+}
+
+.btn:focus { outline: none; }
+
+.income1 {
+    float: left;
+
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+   text-align: center;
+}
+.title1{
+    color:rgb(40,185,181);
+}
+.title2{
+    color:rgb(255,80,73);
+}
+

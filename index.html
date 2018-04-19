@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>cemk replica page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+   <!-- <script src="node_modules/angular/angular.min.js"></script>-->
+   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="app.js"></script>
+
+</head>
+    <body>
+        <div class="container-fluid style" ng-controller="myCtrl">
+            <div class="row">
+                <div class="col-md-12">
+            <div class="background">
+                <div class="budget">
+                    <div class="heading">Available Budget in April 2018
+                    </div>
+                    <div class="balance">+ 5,000.00</div>
+                    <div class="income settings">
+                    <div class="innertext">Income</div>
+                           <div class="percentage pull-right">40%</div>
+                    <div class="value pull-right">5000</div>
+                 
+                </div>
+                     <div class="expense settings">
+                    <div class="innertext">Expenses</div>
+                           <div class="percentage pull-right">30%</div>
+                    <div class="value pull-right">2000</div>
+                 
+                </div>
+                </div>
+                
+                </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="bottom">
+            <div class="add">
+                <div class="text-center">
+                    <div class="col-md-3"></div>
+                    <select class="col-md-1 options" ng-model="optionValue">
+                        <option value="add" selected>+</option>
+                        <option value="remove">-</option>
+                    </select>
+               
+                    <input type="text" class="col-md-3 description" placeholder="Add description" ng-model="element1">
+                        
+                 
+                    <input type="number" class=" col-md-1 description" placeholder="Value" ng-model="element2">
+                        
+                  
+                    <button class=" col-md-1 btn" ng-click="addList()"><i class="fa fa-check-circle-o" ></i></button>
+                        
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+                </div>
+            </div>
+            <div class="row">
+               
+            <div class="income1 col-md-6">
+                    <h2 class="title1">Income</h2> 
+                   
+                        <div class="well well-modified">
+                        <div class="row">
+                            <div class="col-md-12"  ng-repeat="x in incomeList">
+                                <span  style="font-size:20px; color:blueviolet;"ng-bind="x.incomeText | uppercase"></span><span class="pull-right">
+                                <span  style="font-size: 20px; color:brown;margin-right: 20px;"ng-bind="x.incomeText1 | number "></span><button style="border:none; background: none;cursor: pointer;" ng-click="deleteIncome($index,x.incomeText1)" ><i class="fa fa-times-circle-o"style="font-size: 30px; color:darkblue" ></i></button></span>
+                            </div>
+                        </div>
+                </div>
+                        
+                </div>
+                 <div class="income1 col-md-6">
+                    <h2 class="title2">Expenses</h2> 
+                    
+                        <div class="well well-modified">
+                        <div class="row">
+                            <div class="col-md-12"  ng-repeat="y in expenseList">
+                                <span  style="font-size:20px; color:darkolivegreen;"ng-bind="y.expenseText | uppercase"></span><span class="pull-right">
+                                <span  style="font-size: 20px; color:mediumblue;margin-right: 20px;"ng-bind="y.expenseText1 | number "></span><button style="border:none; background: none;cursor: pointer;" ng-click="deleteExpense($index,y.expenseText1)" ><i class="fa fa-times-circle-o"style="font-size: 30px; color:darkred" ></i></button></span>
+                            </div>
+                        </div>
+                </div>
+                        </div>
+                </div>
+          
+               
+        </div>
+    </body>
+</html>
